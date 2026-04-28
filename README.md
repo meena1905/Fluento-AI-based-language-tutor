@@ -100,4 +100,3 @@ fluento/
 
 ---
 
-Built with ❤️ using Groq AI + Vanilla JS
