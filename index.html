@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Fluento — Learn Any Language</title>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Righteous&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- ── LANGUAGE PICKER ── -->
+<div id="lang-screen" class="screen active">
+  <div class="hero">
+    <div class="hero-logo">fluen<span>to</span></div>
+    <div class="hero-sub">Your AI Language Tutor</div>
+    <div class="hero-desc">Pick a language. Follow the path. Chat with your AI tutor. Go from zero to fluent — step by step.</div>
+  </div>
+  <div class="lang-grid" id="lang-grid"></div>
+</div>
+
+<!-- ── ROADMAP ── -->
+<div id="roadmap-screen" class="screen">
+  <div class="roadmap-header">
+    <div class="roadmap-header-inner">
+      <button class="back-btn" onclick="goBack('lang')">←</button>
+      <div class="header-lang-info">
+        <div class="header-lang-name" id="rmap-lang-name">Japanese</div>
+        <div class="header-lang-sub" id="rmap-lang-flag">🇯🇵 Your learning path</div>
+      </div>
+      <div class="header-stats">
+        <div class="stat-chip xp" id="stat-xp">⚡ 0 XP</div>
+        <div class="stat-chip streak" id="stat-streak">🔥 0</div>
+        <div class="stat-chip level" id="stat-level">🎯 Beginner</div>
+      </div>
+    </div>
+  </div>
+  <div class="xp-progress-wrap">
+    <div class="xp-labels"><span id="xp-label-l">0 XP</span><span id="xp-label-r">Next level: 100 XP</span></div>
+    <div class="xp-bar"><div class="xp-fill" id="xp-fill" style="width:0%"></div></div>
+  </div>
+  <div class="roadmap-body" id="roadmap-body"></div>
+</div>
+
+<!-- ── LESSON ── -->
+<div id="lesson-screen" class="screen">
+  <div class="lesson-header">
+    <div class="lesson-header-inner">
+      <button class="back-btn lesson-close" onclick="goBack('roadmap')">←</button>
+      <div class="lesson-title" id="lesson-title">Greetings</div>
+      <div class="stat-chip xp" id="lesson-xp-chip">⚡ 0 XP</div>
+    </div>
+  </div>
+  <div class="lesson-info-bar">
+    <div class="lesson-stage-badge" id="lesson-stage-badge">Beginner</div>
+    <div class="lesson-xp-gain">+10 XP per correct answer</div>
+  </div>
+  <div class="phrase-spotlight">
+    <div class="phrase-card" id="phrase-card" style="display:none">
+      <div class="phrase-label">Phrase of the moment</div>
+      <div class="phrase-main" id="phrase-main"></div>
+      <div class="phrase-roman" id="phrase-roman"></div>
+      <div class="phrase-english" id="phrase-english"></div>
+    </div>
+  </div>
+  <div class="chat-wrap">
+    <div class="messages" id="messages"></div>
+  </div>
+  <div class="hint-text" id="hint-text">Your AI tutor will guide you through this lesson</div>
+  <div class="input-bar">
+    <input class="chat-input" id="chat-input" placeholder="Type your response..." disabled/>
+    <button class="speak-btn" id="speak-btn" onclick="speakPhrase(document.getElementById('phrase-main').textContent)" title="Hear the phrase">🔊</button>
+    <button class="send-btn" id="send-btn" onclick="sendMsg()" disabled>Send</button>
+  </div>
+</div>
+
+<div class="xp-toast" id="xp-toast">+10 XP</div>
+
+<!-- JS files -->
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
