@@ -94,6 +94,12 @@ fluento/
 - Make sure you're connected to the internet
 - Open browser DevTools (F12) → Console tab to see errors
 
+## License
+
+[MIT](LICENSE) — Developed by [Meenakshi](https://github.com/meena1905)
+
+---
+
 **CORS error in browser?**
 - Use VS Code Live Server instead of opening the file directly
 - Or use Chrome with `--disable-web-security` flag (for local demo only)
